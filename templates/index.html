@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/indexStyles.css'%}">
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="{% static 'images/1.png'%}" alt="Logo">
+
+    </nav>
+    <div class="form-div">
+        <form method="post" action="">
+            <h1>TYpe Your Prompt Here </h1>
+            {% csrf_token %}
+            <input type="text" style="font-size:20px" name="prompt" id="prmpt">
+        </form>
+    </div>
+
+    
+    <script src="{% static 'css/indexJs.js'%}"></script>
+</body>
+
+</html>
